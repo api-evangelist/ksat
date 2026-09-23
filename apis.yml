@@ -1,23 +1,59 @@
 aid: ksat
+
 name: KSAT
-description: 'KSAT is a company surfaced via the API Evangelist harvest backlog (source: space) and added
-  to the network as a stub for full-pipeline profiling.'
+
+image: https://www.ksat.no/globalassets/ksat/sop/antenna-svalsat-longyearbyen.-c-ksat.jpg?width=1000&rxy=0.5,0.5
+
+description: 'KSAT (Kongsberg Satellite Services) provides high‑reliability satellite ground station services, data acquisition, TT&C solutions, and hosted infrastructure for a wide range of customers including small‑sat constellations, lunar missions, and launch vehicle telemetry. Operating a global network of ground stations, KSAT enables secure, low‑latency communications between space assets and ground operators, supporting both commercial and governmental space initiatives.'
+
 url: https://raw.githubusercontent.com/api-evangelist/ksat/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:space
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-23'
+
 modified: '2026-09-23'
+
 tags:
-- Company
-apis: []
+- Satellite
+- GroundStation
+- Space
+- Communications
+- Norway
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/ksat-hosts.yml
+- type: Vendors
+  url: vendors/ksat-vendors.yml
+- type: SignUp
+  url: https://www.ksat.no/tenant/register/
+- type: PrivacyPolicy
+  url: https://www.ksat.no/privacy-and-data-protection/
+- type: Newsroom
+  url: https://www.ksat.no/news/
+- type: DomainSecurity
+  url: security/ksat-domain-security.yml
 - type: Website
   url: https://ksat.no/
+
+apis: []
+x-enrichment:
+  date: '2026-09-23'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
